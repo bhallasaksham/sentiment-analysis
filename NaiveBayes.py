@@ -43,19 +43,6 @@ class NaiveBayes:
         self.negWords = 0.0
         self.wordCount = 0.0
 
-        # TODO
-        # Implement a multinomial naive bayes classifier and a naive bayes classifier with boolean features. The flag
-        # naiveBayesBool is used to signal to your methods that boolean naive bayes should be used instead of the usual
-        # algorithm that is driven on feature counts. Remember the boolean naive bayes relies on the presence and
-        # absence of features instead of feature counts.
-
-        # When the best model flag is true, use your new features and or heuristics that are best performing on the
-        # training and test set.
-
-        # If any one of the flags filter stop words, boolean naive bayes and best model flags are high, the other two
-        # should be off. If you want to include stop word removal or binarization in your best performing model, you
-        # will need to write the code accordingly.
-
     def classify(self, words):
         """
         Classify a list of words and return a positive or negative sentiment
@@ -81,11 +68,9 @@ class NaiveBayes:
             for word in words:
 
                 pWord = -(math.log(self.freqInPosDoc[word] + 20.0) - math.log(pSumofNks + (20.0*len(self.vocabulary))))
-                #pWord = -(math.log(20) - math.log(pSumofNks + (20*self.vocabCount)))
                 p_naiveScore += pWord
 
                 nWord = -(math.log(self.freqInNegDoc[word] + 20.0) - math.log(nSumofNks + (20.0*len(self.vocabulary))))
-                #nWord = -(math.log(20) - math.log(nSumofNks + (20*self.vocabCount)))
                 n_naiveScore += nWord
 
             p_naiveScore += pClassification
@@ -176,9 +161,6 @@ class NaiveBayes:
         Train your model on a document with label classifier (pos or neg) and words (list of strings). You should
         store any structures for your classifier in the naive bayes class. This function will return nothing
         """
-        # TODO
-        # Train model on document with label classifiers and words
-        # Write code here
 
         posWordInDocument = defaultdict(float)
         negWordInDocument = defaultdict(float)
@@ -230,7 +212,6 @@ class NaiveBayes:
             for word in negWordInDocument:
                 self.freqInNegDoc[word] += 1
 
-        #print self.freqInPosDoc[words[0]]
         pass
 
     def readFile(self, fileName):
