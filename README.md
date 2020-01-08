@@ -72,7 +72,7 @@ Adding flags should be done as such. Flag -f adds stop word filtering, flag -b u
 
 ## Scope for further improvements 
 
-There are also some common techniques to improve the performance of Na ̈ıve Bayes. Here are some examples of where improvements should be made.  
+There are also some common techniques to improve the performance of Naive Bayes. Here are some examples of where improvements should be made.  
 
 * "Many people thought this movie was very good, but I found it bad". This sentence has two strong and opposing words in this sentence (good, bad), but it can be inferred that the sentiment of the sentence can be determined by the word bad and not good. How can you weigh your features for ’good’ and ’bad’ differently to reflect this sentence’s sentiment?
 * "Paige’s acting was neither realistic or inspired". Currently, the feature set comprises individual words in a bag of words approach. Because of this, the words inspired and realistic are considered separately despite the surrounding words like neither. How can you model take into consideration this word order?
