@@ -1,4 +1,4 @@
-# Sentiment Analyis on iMDB Movie Reviews 
+# Sentiment Analyis on IMDb Movie Reviews 
 
 ## About
 
@@ -12,18 +12,18 @@ Using Naive Bayes, I will use words as features, add the logarithmic probability
 
 Naive Bayes is a classification technique that uses Bayes' Theorem with an underlying assumption of independence among predictors. Naive Bayes classifiers assume a features presence is unrelated to another feature. For example, if an orange is considered to be an orange if it is orange, round, and 4 inches in diamenter; regardless of if two of these features are related or even existent upon another feature. Bayes' Theorem is the following 
 
-################ Formula 1 here ###################
+![alt text](https://github.com/bhallasaksham/sentiment-analysis/blob/master/raw/bayes-theorem.png)
 
 where A is the class and B is the predictor. There are many examples online, I will leave that for outside of this document.   
 
 There are several pros and cons of Naive Bayes.  
 
-####Pros
+### Pros
 
 * Easy and fast to predict classes of test data. Performs well with multi class prediction  
 * If the assumption of independence holds, a Naive Bayes classifier per- forms better than most of models like logistic regression and with less training data.  
 
-####Cons
+### Cons
 
 * If categorical variables have a category that is not observed well in training, then the model will assign a 0 or near zero probability and will be unable to make predictions. To solve this Zero Frequency problem, we can use a smoothing technique like Laplace estimation.  
 
@@ -33,12 +33,13 @@ There are several pros and cons of Naive Bayes.
 
 ## Binary Version of Naive Bayes
 
-To implement a binary version of Naive Bayes classifier, we use the presence or absence of a feature rather than the feature counts. Formal Equation of Binary Naive Bayes  
+To implement a binary version of Naive Bayes classifier, we use the presence or absence of a feature rather than the feature counts. Here is the formal Equation of Binary Naive Bayes  
 
-############### FORMULA 2 HERE ########################
+![alt text](https://github.com/bhallasaksham/sentiment-analysis/blob/master/raw/binary-naive-bayes.png)
+
 where P(wk,cj) is equal to the Binary event model,  
 
-############### FORMULA 3 HERE ########################
+![alt text](https://github.com/bhallasaksham/sentiment-analysis/blob/master/raw/binary-implementation.png)
 
 where wk represents each word in the vocabulary  
 
